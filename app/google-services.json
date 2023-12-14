@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "27115115292",
+    "project_id": "seven-summit-1cf4a",
+    "storage_bucket": "seven-summit-1cf4a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27115115292:android:78af63d35b77f7cf75e0d9",
+        "android_client_info": {
+          "package_name": "com.example.a7summit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7PcgOD278_l-oIQjnHHqEasnhxcZCGks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
