@@ -61,7 +61,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:text="Logout" />
+                android:text="Logout"
+                android:textColor="@color/black"/>
 
         </LinearLayout>
 
