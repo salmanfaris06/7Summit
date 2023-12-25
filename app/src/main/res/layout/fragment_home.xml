@@ -158,8 +158,7 @@
                     android:layout_width="380dp"
                     android:layout_height="370dp"
                     app:cardCornerRadius="15dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="20dp">
+                    android:layout_marginTop="15dp">
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:id="@+id/cardImg1"
@@ -260,6 +259,227 @@
                             android:text="Buy Ticket"
                             android:backgroundTint="@color/orange"
                             android:id="@+id/btn_apiPurba"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="235dp"
+                            android:layout_marginBottom="15dp"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="380dp"
+                    android:layout_height="370dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="15dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:id="@+id/cardImg2"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/sindoro_asset"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="380dp"
+                        android:layout_height="200dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginTop="170dp">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:id="@+id/nameMountain2"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gunung Sindoro"
+                                android:textStyle="bold"
+                                android:textSize="24dp"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_marginTop="60dp"
+                                android:layout_marginLeft="15dp"
+                                android:id="@+id/detailName2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/location"/>
+                                    <TextView
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="120dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Jawa Tengah"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/mdpl"/>
+                                    <TextView
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="120dp"
+                                        android:layout_height="match_parent"
+                                        android:text="3.136 mdpl"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginTop="60dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp. 225.000"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="24dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="For 1 Ticket/Person"
+                                    android:textSize="12sp"
+                                    android:gravity="center"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Ticket"
+                            android:backgroundTint="@color/orange"
+                            android:id="@+id/btn_Sindoro"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="235dp"
+                            android:layout_marginBottom="15dp"/>
+                    </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="380dp"
+                    android:layout_height="370dp"
+                    app:cardCornerRadius="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:id="@+id/cardImg3"
+                        android:layout_height="170dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/prau_asset"/>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="380dp"
+                        android:layout_height="200dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_marginTop="170dp">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:id="@+id/nameMountain3"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Gunung Prau"
+                                android:textStyle="bold"
+                                android:textSize="24dp"/>
+                        </RelativeLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <LinearLayout
+                                android:layout_marginTop="60dp"
+                                android:layout_marginLeft="15dp"
+                                android:id="@+id/detailName3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/location"/>
+                                    <TextView
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="120dp"
+                                        android:layout_height="match_parent"
+                                        android:text="Jawa Tengah"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:src="@drawable/mdpl"/>
+                                    <TextView
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_width="120dp"
+                                        android:layout_height="match_parent"
+                                        android:text="2.565 mdpl"
+                                        android:gravity="center_vertical"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="150dp"
+                                android:layout_height="60dp"
+                                android:layout_marginLeft="50dp"
+                                android:layout_marginTop="60dp"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rp. 175.000"
+                                    android:textStyle="bold"
+                                    android:layout_marginTop="5dp"
+                                    android:textSize="24dp"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"/>
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="For 1 Ticket/Person"
+                                    android:textSize="12sp"
+                                    android:gravity="center"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Buy Ticket"
+                            android:backgroundTint="@color/orange"
+                            android:id="@+id/btn_Prau"
                             android:layout_gravity="bottom"
                             android:layout_marginLeft="235dp"
                             android:layout_marginBottom="15dp"/>
