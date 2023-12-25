@@ -23,10 +23,21 @@ class HomeFragment : Fragment() {
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
         val btnMerapi: Button = rootView.findViewById(R.id.btn_merapi)
         val btnApiPurba: Button = rootView.findViewById(R.id.btn_apiPurba)
+        val btnSindoro: Button = rootView.findViewById(R.id.btn_Sindoro)
+        val btnPrau: Button = rootView.findViewById(R.id.btn_Prau)
         btnMerapi.setOnClickListener {
             showCustomDialog()
         }
         btnApiPurba.setOnClickListener {
+            // Belum diganti
+            showCustomDialog()
+        }
+        btnPrau.setOnClickListener {
+            //Belum diganti
+            showCustomDialog()
+        }
+        btnSindoro.setOnClickListener {
+            //Belum diganti
             showCustomDialog()
         }
         return rootView
@@ -63,7 +74,7 @@ class HomeFragment : Fragment() {
         if (mapIntent.resolveActivity(requireActivity().packageManager) != null) {
             startActivity(mapIntent)
         } else {
-            Toast.makeText(requireContext(), "Aplikasi peta tidak terpasang", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "Aplikasi maps tidak terpasang", Toast.LENGTH_SHORT).show()
         }
     }
 }
