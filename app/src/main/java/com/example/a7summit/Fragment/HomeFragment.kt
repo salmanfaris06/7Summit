@@ -26,6 +26,7 @@ class HomeFragment : Fragment() {
         val btnSindoro: Button = rootView.findViewById(R.id.btn_Sindoro)
         val btnPrau: Button = rootView.findViewById(R.id.btn_Prau)
         btnMerapi.setOnClickListener {
+            //Ga bisa caranya
             showCustomDialog()
         }
         btnApiPurba.setOnClickListener {
