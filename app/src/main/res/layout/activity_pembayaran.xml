@@ -65,6 +65,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textColor="@color/black"
+                        android:gravity="center_vertical"
                         android:id="@+id/inDestination"
                         android:inputType="none"
                         android:paddingLeft="10dp"
@@ -121,6 +122,7 @@
                         android:id="@+id/inPrice"
                         android:textColor="@color/black"
                         android:paddingLeft="10dp"
+                        android:gravity="center_vertical"
                         android:text="Rp. 200.000"
                         android:textSize="14sp"
                         android:background="@drawable/border_edit"/>
@@ -146,6 +148,7 @@
                         android:id="@+id/inDate"
                         android:layout_height="match_parent"
                         android:textColor="@color/black"
+                        android:gravity="center_vertical"
                         android:paddingLeft="10dp"
                         android:text="DD/MM/YYYY"
                         android:inputType="date"
