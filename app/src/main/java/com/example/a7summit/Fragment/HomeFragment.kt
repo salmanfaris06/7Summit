@@ -13,16 +13,21 @@ import com.example.a7summit.PembayaranActivity.Companion.DATA_NAMA
 import com.example.a7summit.R
 
 class HomeFragment : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        // Inflate layout untuk Fragment ini
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
+
+        // Inisialisasi button-button yang ada di dalam layout
         val btnMerapi: Button = rootView.findViewById(R.id.btn_merapi)
         val btnApiPurba: Button = rootView.findViewById(R.id.btn_apiPurba)
         val btnSindoro: Button = rootView.findViewById(R.id.btn_Sindoro)
         val btnPrau: Button = rootView.findViewById(R.id.btn_Prau)
 
+        // Set listener untuk setiap button, memanggil fungsi navigateToPembayaran dengan parameter yang sesuai
         btnMerapi.setOnClickListener {
             navigateToPembayaran("Gunung Merapi", "Rp. 200.000")
         }
@@ -36,9 +41,11 @@ class HomeFragment : Fragment() {
             navigateToPembayaran("Gunung Sindoro", "Rp. 175.000")
         }
 
+        // Mengembalikan tampilan root (view) yang telah dibuat
         return rootView
     }
 
+    // Fungsi untuk berpindah ke halaman PembayaranActivity dengan membawa data namaGunung dan harga sebagai extra
     private fun navigateToPembayaran(namaGunung: String, harga: String) {
         val intent = Intent(requireContext(), PembayaranActivity::class.java)
         intent.putExtra(DATA_NAMA, namaGunung)
