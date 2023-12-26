@@ -1,6 +1,7 @@
 package com.example.a7summit
 
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -8,10 +9,12 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
 import com.example.a7summit.databinding.ActivityPembayaranBinding
+import java.util.Calendar
 
 class PembayaranActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityPembayaranBinding
+    private val calendar = Calendar.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPembayaranBinding.inflate(layoutInflater)
@@ -22,12 +25,34 @@ class PembayaranActivity : AppCompatActivity() {
         binding.inDestination.text = namaGunung
         binding.inPrice.text = hargaTiket
 
-        binding.inDestination
-        binding.inPrice
-
         binding.btnConfPay.setOnClickListener {
             showCustomDialog()
         }
+
+        binding.inDate.setOnClickListener {
+            showDatePicker()
+        }
+    }
+
+    private fun showDatePicker() {
+        val year = calendar.get(Calendar.YEAR)
+        val month = calendar.get(Calendar.MONTH)
+        val day = calendar.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(
+            this,
+            DatePickerDialog.OnDateSetListener { _, selectedYear, selectedMonth, selectedDay ->
+                // Handle selected date
+                val selectedDate = "$selectedDay/${selectedMonth + 1}/$selectedYear"
+                binding.inDate.text = selectedDate
+            },
+            year,
+            month,
+            day
+        )
+
+        // Tampilkan date picker dialog
+        datePickerDialog.show()
     }
 
     private fun showCustomDialog() {
