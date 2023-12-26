@@ -1,81 +1,59 @@
 package com.example.a7summit.Fragment
 
-import android.app.AlertDialog
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.Toast
+import com.example.a7summit.PembayaranActivity
+import com.example.a7summit.PembayaranActivity.Companion.DATA_HARGA
+import com.example.a7summit.PembayaranActivity.Companion.DATA_NAMA
 import com.example.a7summit.R
-import com.example.a7summit.databinding.FragmentHomeBinding
-import com.example.a7summit.databinding.FragmentUserBinding
-import com.google.firebase.auth.FirebaseAuth
 
 class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        var namaGunung: String = ""
+        var harga: String = ""
         val rootView = inflater.inflate(R.layout.fragment_home, container, false)
         val btnMerapi: Button = rootView.findViewById(R.id.btn_merapi)
         val btnApiPurba: Button = rootView.findViewById(R.id.btn_apiPurba)
         val btnSindoro: Button = rootView.findViewById(R.id.btn_Sindoro)
         val btnPrau: Button = rootView.findViewById(R.id.btn_Prau)
+        val intent = Intent(requireContext(), PembayaranActivity::class.java)
+
         btnMerapi.setOnClickListener {
-            //Ga bisa caranya
-            showCustomDialog()
+            namaGunung = "Gunung Merapi"
+            harga = "Rp. 200.000"
+            startActivity(intent)
+            intent.putExtra(DATA_NAMA,namaGunung)
+            intent.putExtra(DATA_HARGA,harga)
         }
         btnApiPurba.setOnClickListener {
-            // Belum diganti
-            showCustomDialog()
+            namaGunung = "Gunung Api Purba"
+            harga = "Rp. 125.000"
+            startActivity(intent)
+            intent.putExtra(DATA_NAMA,namaGunung)
+            intent.putExtra(DATA_HARGA,harga)
         }
         btnPrau.setOnClickListener {
-            //Belum diganti
-            showCustomDialog()
+            namaGunung = "Gunung Prau"
+            harga = "Rp. 225.000"
+            startActivity(intent)
+            intent.putExtra(DATA_NAMA,namaGunung)
+            intent.putExtra(DATA_HARGA,harga)
         }
-        btnSindoro.setOnClickListener {
-            //Belum diganti
-            showCustomDialog()
+        btnSindoro.setOnClickListener{
+            namaGunung = "Gunung Sindoro"
+            harga = "Rp. 175.000"
+            startActivity(intent)
+            intent.putExtra(DATA_NAMA,namaGunung)
+            intent.putExtra(DATA_HARGA,harga)
         }
         return rootView
-    }
-
-    private fun showCustomDialog() {
-
-        val builder = AlertDialog.Builder(requireContext())
-
-        val inflater = layoutInflater
-        val dialogView = inflater.inflate(R.layout.confirm_dialog, null)
-        builder.setView(dialogView)
-
-        val btnConfirm: Button = dialogView.findViewById(R.id.btn_confirm)
-
-        btnConfirm.setOnClickListener {
-            openMap()
-        }
-
-        val alertDialog = builder.create()
-        alertDialog.show()
-    }
-    private fun openMap() {
-        val latitude = -7.540561476419376
-        val longitude = 110.44570410768596
-
-        // Buat Uri untuk membuka maps
-        val gmmIntentUri = Uri.parse("geo:$latitude,$longitude?q=$latitude,$longitude")
-
-        // Intent untuk membuka aplikasi maps
-        val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
-        mapIntent.setPackage("com.google.android.apps.maps")
-
-        if (mapIntent.resolveActivity(requireActivity().packageManager) != null) {
-            startActivity(mapIntent)
-        } else {
-            Toast.makeText(requireContext(), "Aplikasi maps tidak terpasang", Toast.LENGTH_SHORT).show()
-        }
     }
 }
